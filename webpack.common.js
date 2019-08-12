@@ -9,7 +9,7 @@ module.exports={
 
 
 
-    entry:"./src/index.js",
+     entry:["babel-polyfill","./src/index.js",],
 
     // entry:{
 
