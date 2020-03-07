@@ -16,7 +16,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].[contenthash].js",
+    filename: "[name].[hash].js",
     publicPath: ""
   },
   module: {
@@ -50,13 +50,16 @@ module.exports = {
         //we use extract-text-plugin to get hold of that css and insert it into some sort of a file!
         use: [
           {
+            loader:"css-hot-loader"
+          },
+          {
             loader: miniCssExtract.loader,
-            options: {
-              // only enable hot in development
-              hmr: process.env.NODE_ENV === "development",
-              // if hmr does not work, this is a forceful method.
-              reloadAll: true
-            }
+            // options: {
+            //   // only enable hot in development
+            //   hmr: process.env.NODE_ENV === "development",
+            //   // if hmr does not work, this is a forceful method.
+            //   reloadAll: true
+            // }
           },
           {
             loader: "css-loader"
@@ -66,6 +69,7 @@ module.exports = {
     ]
   },
   plugins: [
+  //  new webpack.HotModuleReplacementPlugin(),
     new miniCssExtract({
       // Options similar to the same options in webpackOptions.output
       // all options are optional

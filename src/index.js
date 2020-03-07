@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import BigImage from "../assets/1.jpg";
 import SmallImage from "../assets/3.jpg";
-
+if(module && module.hot) module.hot.accept()
 const App = () => {
   // setTimeout(()=>{
   //     System.import('../assets/1.jpg')
@@ -14,7 +14,8 @@ const App = () => {
 
 const as = ReactComponent => {
   console.log("Hello Worlddddddddddd!");
-  alert("Updated Code here for debugging");
+ // alert("Updated Code here for debugging");
+ alert(process.env.NODE_ENV)
 
   fetch("server/products")
     .then(response => response.json())
