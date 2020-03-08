@@ -4,7 +4,7 @@ import '../index.scss';
 import "../index.css";
 export default function App() {
     return (
-        <div>
+        <div className="container mt-2">
             This is React
         </div>
     )
