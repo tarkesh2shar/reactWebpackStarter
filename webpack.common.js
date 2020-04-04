@@ -1,4 +1,3 @@
-const path = require('path')
 const miniCssExtract = require('mini-css-extract-plugin')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
@@ -8,18 +7,6 @@ const ASSET_PATH = process.env.ASSET_PATH || '/'
 
 module.exports = {
 	entry: ['babel-polyfill', './src/index.js'],
-
-	// entry:{
-
-	//   bundle:"./src/index.js",
-	//   vendor:VENDOR_LIBS
-	// },
-
-	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: '[name].[hash].js',
-		publicPath: '',
-	},
 	module: {
 		//Specify all loaders inside rules array!!
 		rules: [
