@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import '../index.scss'
 import '../index.css'
+import Test from './sample/test'
 export default function App() {
 	return (
 		<div className='container mt-2'>
@@ -25,6 +26,7 @@ export default function App() {
 							)
 						}}
 					/>
+					<Route component={Test} path='/test' />
 					<Route path='/' component={() => 'This is path ---> /'} />
 				</Switch>
 			</BrowserRouter>
