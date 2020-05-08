@@ -3,5 +3,14 @@
 	color: palegreen;
 }
 body {
-	background-color: yellow !important;
+	background-color: palegoldenrod !important;
+	background-image: url(../../../assets/1.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+.routes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
