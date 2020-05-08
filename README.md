@@ -54,3 +54,22 @@ function WaitingComponent(Component) {
 ```
 <Route component={WaitingComponent(Test)} path='/test' />
 ```
+**Running in a docker container**
+```
+git clone
+cd reactWebpackStarter
+docker-compose up 
+
+```
+
+## Known issues ##
+```'image-webpack-loader'``` 
+needs to be disable to work on docker **Issue** **https://github.com/tcoopman/image-webpack-loader/issues/124**
+<br/>
+```"singleQuote": false```
+this needs to be false because **Dockerfile** doesnt like single quotes 
+
+## Thats it 
+
+**_Feel free to generate a PR to this development react-webpack-server_** :)
+
