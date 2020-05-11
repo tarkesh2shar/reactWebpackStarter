@@ -23,7 +23,7 @@ module.exports = {
 			// },
 
 			{
-				test: /\.(jpe?g|png|gif|svg)$/,
+				test: /\.(jpe?g|png|gif|svg|webp)$/,
 				exclude: /node_modules/,
 				use: [
 					{
@@ -37,7 +37,7 @@ module.exports = {
 
 			{
 				test: /\.css$/,
-				exclude: /node_modules/,
+
 				//we use extract-text-plugin to get hold of that css and insert it into some sort of a file!
 				use: [
 					{
@@ -63,7 +63,7 @@ module.exports = {
 
 			{
 				test: /\.s[ac]ss$/i,
-				exclude: /node_modules/,
+
 				//we use extract-text-plugin to get hold of that css and insert it into some sort of a file!
 				use: [
 					{
