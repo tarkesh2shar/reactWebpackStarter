@@ -22,9 +22,7 @@ export default function App() {
 			<BrowserRouter>
 				<div className="routes">
 					<Link to="/add">Route(/add)</Link>
-
 					<Link to="/add/1">Route(/add/1)</Link>
-
 					<Link to="/add/2">Route(/add/2)</Link>
 					<Link to="/test">Route(test) --> using code splitting</Link>
 				</div>
@@ -48,7 +46,8 @@ export default function App() {
 						}}
 					/>
 					<Route component={WaitingComponent(Test)} path="/test" />
-					<Route path="/" component={() => "This is path ---> /"} />
+					<Route path="/" exact component={() => "This is path ---> /"} />
+					<Route component={() => "Page NOT foUND"} />
 				</Switch>
 			</BrowserRouter>
 		</div>
