@@ -35,8 +35,8 @@ export default function App() {
 									header
 									<br />
 									<Switch>
-										<Route component={() => "This is path ---> /add/2"} path="/add/2" />
-										<Route component={() => "This is path ---> /add/1"} path="/add/1" />
+										<Route exact component={() => "This is path ---> /add/2"} path="/add/2" />
+										<Route exact component={() => "This is path ---> /add/1"} path="/add/1" />
 										<Route component={() => "This is path ---> /add"} />
 									</Switch>
 									<br />
